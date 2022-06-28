@@ -1,6 +1,7 @@
 {
   "description": "Typescript - Redux ToolKit - Vite - Sample Shopping Cart",
   "version": "0.2.0",
+  "private": true,
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -37,6 +38,11 @@
     "testEnvironment": "jsdom",
     "setupFilesAfterEnv": [
       "<rootDir>/jest-setup.ts"
+    ],
+    "colelctCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx,js,jsx}",
+      "!src/**/*.d.ts"
     ],
     "moduleNameMapper": {
       "\\.(css|less)$": "identity-obj-proxy"
