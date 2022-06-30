@@ -52,8 +52,10 @@ export function Cart() {
               <td>
                 <input
                   type="text"
+                  data-testid={products[id].id}
+                  aria-label={`Update ${products[id].name} quantity`}
                   className={styles.input}
-                  defaultValue={quantity}
+                  value={quantity}
                   onChange={(e) => onQuantityChange(e, id)}
                 />
               </td>
@@ -61,6 +63,7 @@ export function Cart() {
               <td>
                 <button
                   aria-label={`Remove ${products[id].name} from Shopping Cart`}
+                  title={`remove ${products[id].name}`}
                   onClick={() => dispatch(removeFromCart(id))}
                 >
                   X
